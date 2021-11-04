@@ -12,7 +12,7 @@ export const createProducts = async () => {
         return;
       }
 
-      const newProduct = new Product({
+      const newProduct = await new Product({
         name,
         image,
         description,
