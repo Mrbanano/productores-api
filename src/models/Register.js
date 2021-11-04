@@ -9,8 +9,11 @@ const schema = new Schema(
     },
     content: [
       {
-        ref: 'Product',
-        type: Schema.Types.ObjectId,
+        id_product: {
+          ref: 'Product',
+          type: Schema.Types.ObjectId,
+          required: true,
+        },
         quantity: {
           type: Number,
           required: true,
@@ -19,7 +22,6 @@ const schema = new Schema(
           type: Number,
           required: true,
         },
-        required: true,
       },
     ],
   },

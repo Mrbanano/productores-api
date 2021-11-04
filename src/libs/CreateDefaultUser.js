@@ -8,7 +8,7 @@ export const createDefaultUser = async () => {
       const { userName, password, roles } = user;
       const foundUser = await User.findOne({ userName });
       if (foundUser) {
-        console.log(`User already exists`);
+        console.log(`[✔️] User already exists`);
         return;
       }
       const newUser = new User({
@@ -19,9 +19,9 @@ export const createDefaultUser = async () => {
       newUser.roles = [newRole._id];
       const userSaved = await newUser.save();
     }
-    console.log('Default user created');
+    console.log('[✔️] Default user created');
   } catch (error) {
-    console.log(error);
+    console.log('[❌]', error);
   }
 };
 

@@ -7,15 +7,15 @@ export const createDefaultRoles = async () => {
       const { name } = role;
       const existingRole = await Role.findOne({ name });
       if (existingRole) {
-        console.log(`Roles already exists`);
+        console.log(`[✔️] Roles already exists`);
         continue;
       }
       const newRole = await new Role(role).save();
     } catch (error) {
-      console.log(error);
+      console.log('[❌]', error);
     }
   }
-  console.log(`Created roles`);
+  console.log(`[✔️] Created roles`);
 };
 
 /**

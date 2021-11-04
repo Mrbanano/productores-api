@@ -46,6 +46,60 @@ const config = {
       img: '',
     },
   ],
+  Catalog: [
+    {
+      name: 'Sandia',
+      description: 'Sandia',
+      image: 'https://i.postimg.cc/vZVQpxHv/snadia.png',
+      category: 'Frutas',
+    },
+    {
+      name: 'Pera',
+      description: 'Pera',
+      image: 'https://i.postimg.cc/tTXpZrdr/pera.png',
+      category: 'Frutas',
+    },
+    {
+      name: 'Manzana',
+      description: 'Manzana',
+      image: 'https://i.postimg.cc/Bbz0z4ry/manzana.png',
+      category: 'Frutas',
+    },
+    {
+      name: 'Zanahoria',
+      description: 'Zanahoria',
+      image: 'https://i.postimg.cc/d1bMR4GP/zanahoria.png',
+      category: 'Verduras',
+    },
+    {
+      name: 'Lechuga',
+      description: 'Lechuga',
+      image: 'https://i.postimg.cc/L6MKnQHj/lechuga.png',
+      category: 'Verduras',
+    },
+    {
+      name: 'Chayote',
+      description: 'Chayote',
+      image: 'https://i.postimg.cc/rw8B9dRm/chayote.png',
+      category: 'Verduras',
+    },
+  ],
+
+  testRegister: {
+    producer: 'CarlosValerio',
+    content: [
+      {
+        name: 'Sandia',
+        price: '3300',
+        quantity: '5',
+      },
+      {
+        name: 'Lechuga',
+        price: '3470',
+        quantity: '5',
+      },
+    ],
+  },
 };
 
 module.exports = config;
