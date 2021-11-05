@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "start": "node dist/index.js",
+    "start": "npm run build && node dist/index.js",
     "dev": "nodemon --exec npx babel-node src/index.js  "
   },
   "author": "Alvaro Castillo",
@@ -29,8 +29,11 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.12",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
   }
 }
