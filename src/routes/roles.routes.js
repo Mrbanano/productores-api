@@ -16,8 +16,7 @@ router.get('/', getRoles);
 router.get('/all', getRolesWithDeleted);
 /* get one */
 router.get('/:id', getRole);
-/* get with categories */
-//router.get('/registerby/:id', getRegisterbyUser);
+
 /* POST */
 router.post('/', createRole);
 /* UPDATE */

@@ -15,7 +15,7 @@ const schema = new Schema(
     roles: [{ ref: 'Role', type: Schema.Types.ObjectId }],
     registers: [{ ref: 'Register', type: Schema.Types.ObjectId }],
   },
-  { versionKey: false }
+  { versionKey: false, timestamps: true }
 );
 
 schema.statics.encryptPassword = async (password) => {
