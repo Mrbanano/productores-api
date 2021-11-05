@@ -7,10 +7,12 @@ const schema = new Schema(
       type: String,
       required: true,
       trim: true,
+      unique: true,
     },
     password: {
       type: String,
       trim: true,
+      required: true,
     },
     roles: [{ ref: 'Role', type: Schema.Types.ObjectId }],
     registers: [{ ref: 'Register', type: Schema.Types.ObjectId }],

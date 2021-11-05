@@ -5,7 +5,7 @@ export const getCategories = async (req, res, next) => {
     const categories = await Category.find({ Delete: false });
     res.status(200).json({
       success: true,
-      count: categories.length,
+      count: categories.length, 
       data: categories,
     });
   } catch (error) {

@@ -11,6 +11,7 @@ import ProductsRoutes from './routes/product.routes';
 import RegisterRoutes from './routes/register.routes';
 import RolesRouter from './routes/roles.routes';
 import UsersRouter from './routes/user.routes';
+import AuthRouter from './routes/auth.routes';
 /*
  *Initial setup
  */
@@ -34,5 +35,6 @@ app.use('/producer/api/v1/Products', ProductsRoutes);
 app.use('/producer/api/v1/Register', RegisterRoutes);
 app.use('/producer/api/v1/Roles', RolesRouter);
 app.use('/producer/api/v1/Users', UsersRouter);
+app.use('/producer/api/v1/Auth', AuthRouter);
 
 export default app;
