@@ -1,5 +1,4 @@
 const Product = require('../models/product');
-const Category = require('../models/Category');
 const User = require('../models/User');
 const Register = require('../models/Register');
 
