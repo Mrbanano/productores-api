@@ -16,6 +16,7 @@ export const createProducts = async () => {
         name,
         image,
         description,
+        nameCategory: category,
       });
       const foundCategory = await Category.findOne({ name: category });
       newProduct.category = foundCategory._id;

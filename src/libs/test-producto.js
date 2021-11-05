@@ -6,28 +6,31 @@ const { testRegister } = require('../config');
 export const testProducto = async () => {
   try {
     const { producer, content } = testRegister;
+
     const resultProducer = await User.findOne({ userName: producer });
-    const id_producer = resultProducer._id;
+    const _id = resultProducer._id;
     for (const c of content) {
       const { name } = c;
       const resultId = await Product.findOne({ name });
-      c.name = c.id_product = resultId._id;
+      c.product = resultId._id;
+      c.category = resultId.category;
+      console.log(resultId.category);
     }
+
     const newRegister = await new Register({
-      id_producer,
+      producer: _id,
       content,
     }).save();
 
     console.log('nuevo registro', newRegister);
 
     const UpdateUser = await User.findByIdAndUpdate(
-      { _id: id_producer },
+      { _id },
       { registers: newRegister._id },
       {
         new: true,
       }
     );
-
     console.log('usuario actualizado', UpdateUser);
   } catch (error) {
     console.log(error);

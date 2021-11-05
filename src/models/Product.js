@@ -19,6 +19,9 @@ const schema = new Schema(
       ref: 'Category',
       required: true,
     },
+    nameCategory: {
+      type: String,
+    },
   },
   { versionKey: false, timestamps: true }
 );

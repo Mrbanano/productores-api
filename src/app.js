@@ -8,6 +8,7 @@ import morgan from 'morgan';
 import IndexRoutes from './routes/index.routes';
 import CateroriesRoutes from './routes/categories.routes';
 import ProductsRoutes from './routes/product.routes';
+import RegisterRoutes from './routes/register.routes';
 /*
  *Initial setup
  */
@@ -28,5 +29,6 @@ app.use(json());
 app.use('/', IndexRoutes);
 app.use('/producer/api/v1/Categories', CateroriesRoutes);
 app.use('/producer/api/v1/Products', ProductsRoutes);
+app.use('/producer/api/v1/Register', RegisterRoutes);
 
 export default app;

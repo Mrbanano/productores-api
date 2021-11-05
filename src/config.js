@@ -89,12 +89,12 @@ const config = {
     producer: 'CarlosValerio',
     content: [
       {
-        name: 'Sandia',
+        name: 'Lechuga',
         price: '3300',
         quantity: '5',
       },
       {
-        name: 'Lechuga',
+        name: 'Manzana',
         price: '3470',
         quantity: '5',
       },

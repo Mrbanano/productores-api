@@ -2,15 +2,20 @@ import { Schema, model } from 'mongoose';
 
 const schema = new Schema(
   {
-    id_producer: {
+    producer: {
       ref: 'User',
       type: Schema.Types.ObjectId,
       required: true,
     },
     content: [
       {
-        id_product: {
+        product: {
           ref: 'Product',
+          type: Schema.Types.ObjectId,
+          required: true,
+        },
+        category: {
+          ref: 'Category',
           type: Schema.Types.ObjectId,
           required: true,
         },
@@ -22,8 +27,15 @@ const schema = new Schema(
           type: Number,
           required: true,
         },
+        productTotal: {
+          type: Number,
+        },
       },
     ],
+    total: {
+      type: Number,
+      required: true,
+    },
   },
   { versionKey: false, timestamps: true }
 );
