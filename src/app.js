@@ -1,5 +1,4 @@
 import express, { urlencoded, json } from 'express';
-import initialSetup from './libs/initialSetup';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';

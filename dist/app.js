@@ -7,8 +7,6 @@ exports.default = void 0;
 
 var _express = _interopRequireWildcard(require("express"));
 
-var _initialSetup = _interopRequireDefault(require("./libs/initialSetup"));
-
 var _morgan = _interopRequireDefault(require("morgan"));
 
 var _helmet = _interopRequireDefault(require("helmet"));
