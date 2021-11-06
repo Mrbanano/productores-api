@@ -52,12 +52,12 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
  */
 const app = (0, _express.default)();
 
-const db = require('./database');
+const db = require('./database'); //initialSetup();
 
-(0, _initialSetup.default)();
 /*
  *Middleware
  */
+
 
 app.use((0, _morgan.default)('dev'));
 app.use((0, _helmet.default)());
