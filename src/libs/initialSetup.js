@@ -9,7 +9,7 @@ const initialSetups = async () => {
   await createCategory();
   await createDefaultUser();
   await createProducts();
-  //await testProducto();
+  await testProducto();
 };
 
 module.exports = initialSetups;

@@ -5,7 +5,11 @@ const { testRegister } = require('../config');
 
 export const testProducto = async () => {
   try {
-    const { producer, content } = testRegister;
+    const count = await Register.estimatedDocumentCount();
+
+    if (count > 0) return;
+
+    const { producer, content, total } = testRegister;
 
     const resultProducer = await User.findOne({ userName: producer });
     const _id = resultProducer._id;
@@ -14,12 +18,12 @@ export const testProducto = async () => {
       const resultId = await Product.findOne({ name });
       c.product = resultId._id;
       c.category = resultId.category;
-      console.log(resultId.category);
     }
 
     const newRegister = await new Register({
       producer: _id,
       content,
+      total,
     }).save();
 
     console.log('nuevo registro', newRegister);
@@ -31,8 +35,9 @@ export const testProducto = async () => {
         new: true,
       }
     );
-    console.log('usuario actualizado', UpdateUser);
+    console.log('[✔️] Default register created');
   } catch (error) {
     console.log(error);
+    next();
   }
 };

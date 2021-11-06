@@ -91,8 +91,8 @@ const config = {
     content: [
       {
         name: 'Lechuga',
-        price: '3300',
-        quantity: '5',
+        price: 3300,
+        quantity: 5,
         productTotal: 16500,
       },
       {
