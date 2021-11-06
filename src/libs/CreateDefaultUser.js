@@ -24,28 +24,3 @@ export const createDefaultUser = async () => {
     console.log('[❌]', error);
   }
 };
-
-/*
-
-export const createDefaultModerator = async () => {
-  try {
-    const foundModerator = await User.findOne({
-      userName: config.DEFAULT_MODERATOR,
-    });
-
-    if (foundModerator) return;
-
-    const newUser = new User({
-      userName: config.DEFAULT_MODERATOR,
-      password: await User.encryptPassword(config.DEFAULT_MODERATOR_PASSWORD),
-      Delete: false,
-    });
-    const role = await Role.findOne({ name: 'producer' });
-    newUser.roles = [role._id];
-    const defaultModerator = await newUser.save();
-    console.log('Default M listo');
-  } catch (error) {
-    console.log(error);
-  }
-};
-*/

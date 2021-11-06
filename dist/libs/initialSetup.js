@@ -1,12 +1,12 @@
 "use strict";
 
+var _CreateProducts = require("./CreateProducts");
+
 var _CreateDefaultRoles = require("./CreateDefaultRoles");
 
 var _CreateCategory = require("./CreateCategory");
 
 var _CreateDefaultUser = require("./CreateDefaultUser");
-
-var _CreateProducts = require("./CreateProducts");
 
 var _testProducto = require("./test-Producto");
 

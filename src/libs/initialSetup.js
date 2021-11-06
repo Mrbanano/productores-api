@@ -1,7 +1,7 @@
+import { createProducts } from './CreateProducts';
 import { createDefaultRoles } from './CreateDefaultRoles';
 import { createCategory } from './CreateCategory';
 import { createDefaultUser } from './CreateDefaultUser';
-import { createProducts } from './CreateProducts';
 import { testProducto } from './test-Producto';
 
 const initialSetups = async () => {

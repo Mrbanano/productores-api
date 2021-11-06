@@ -13,7 +13,7 @@ const swaggerOptions = {
       description: 'MVP de la api para el control de registros de los productores'
     },
     servers: [{
-      url: "".concat(process.env.API_URL, ":").concat(process.env.PORT, "/")
+      url: `${process.env.API_URL}:${process.env.PORT}/`
     }]
   },
   apis: ['./src/routes/*.js']

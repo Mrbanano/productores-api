@@ -4,8 +4,8 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 const config = {
-  MONGODB_URI_TEST: "mongodb://".concat(process.env.MONGODB_HOST_TEST || 'localhost', "/").concat(process.env.MONGODB_DATABASE_TEST || 'Producers'),
-  MONGODB_URI: "mongodb+srv://".concat(process.env.MONGODB_USERNAME, ":").concat(process.env.MONGODB_PASSWORD, "@cluster0.ge68o.mongodb.net/").concat(process.env.MONGODB_DATABASE, "?retryWrites=true&w=majority"),
+  MONGODB_URI_TEST: `mongodb://${process.env.MONGODB_HOST_TEST || 'localhost'}/${process.env.MONGODB_DATABASE_TEST || 'Producers'}`,
+  MONGODB_URI: `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.ge68o.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`,
   SECRET: process.env.SECRET || 'SECRETO-DE-PRUEBA',
   TimeOut: process.env.TIMEOUT || '32400',
   Roles: [{

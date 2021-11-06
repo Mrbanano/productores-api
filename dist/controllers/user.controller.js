@@ -127,7 +127,7 @@ const createUser = async (req, res, next) => {
     });
 
     if (foundUser) {
-      console.log("[\u2714\uFE0F] User already exists");
+      console.log(`[✔️] User already exists`);
       res.status(400).json({
         success: false,
         error: 'User already exists'

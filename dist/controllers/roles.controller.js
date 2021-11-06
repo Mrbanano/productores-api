@@ -83,7 +83,7 @@ const createRole = async (req, res, next) => {
     });
 
     if (existingRole) {
-      console.log("[\u2714\uFE0F] Roles already exists");
+      console.log(`[✔️] Roles already exists`);
       res.status(400).json({
         success: false,
         error: 'Roles already exists'

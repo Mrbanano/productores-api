@@ -20,7 +20,7 @@ const createDefaultRoles = async () => {
       });
 
       if (existingRole) {
-        console.log("[\u2714\uFE0F] Roles already exists");
+        console.log(`[✔️] Roles already exists`);
         continue;
       }
 
@@ -30,7 +30,7 @@ const createDefaultRoles = async () => {
     }
   }
 
-  console.log("[\u2714\uFE0F] Created roles");
+  console.log(`[✔️] Created roles`);
 };
 /**
  * 
