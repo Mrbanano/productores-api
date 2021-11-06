@@ -8,7 +8,7 @@ const initialSetups = async () => {
   await createDefaultRoles();
   await createCategory();
   await createDefaultUser();
-  await createProducts();
+  //await createProducts();
   await testProducto();
 };
 

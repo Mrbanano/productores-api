@@ -19,7 +19,8 @@ import AuthRouter from './routes/auth.routes';
  */
 const app = express();
 const db = require('./database');
-initialSetup();
+
+//initialSetup();
 
 /*
  *Middleware
