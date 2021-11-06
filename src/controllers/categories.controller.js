@@ -5,7 +5,7 @@ export const getCategories = async (req, res, next) => {
     const categories = await Category.find({ Delete: false });
     res.status(200).json({
       success: true,
-      count: categories.length, 
+      count: categories.length,
       data: categories,
     });
   } catch (error) {
@@ -35,7 +35,7 @@ export const getCategory = async (req, res, next) => {
     const category = await Category.findOne({ _id });
     res
       .status(200)
-      .json({ success: true, count: categories.length, data: category });
+      .json({ success: true, count: category.length, data: category });
   } catch (error) {
     console.log('[❌]', error);
     res.status(400).json({ success: false, error: error.message });

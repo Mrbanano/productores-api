@@ -93,13 +93,16 @@ const config = {
         name: 'Lechuga',
         price: '3300',
         quantity: '5',
+        productTotal: 16500,
       },
       {
         name: 'Manzana',
         price: '3470',
         quantity: '5',
+        productTotal: 17350,
       },
     ],
+    total: 33850,
   },
 };
 
