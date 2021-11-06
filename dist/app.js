@@ -52,8 +52,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
  */
 const app = (0, _express.default)();
 
-const db = require('./database'); //initialSetup();
-
+const db = require('./database');
 /*
  *Middleware
  */
